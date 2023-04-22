@@ -1,6 +1,7 @@
 package com.yupi.springbootinit.model.vo;
 
 import com.google.gson.Gson;
+import com.yupi.springbootinit.datasource.DataSource;
 import com.yupi.springbootinit.model.entity.Picture;
 import lombok.Data;
 
@@ -25,12 +26,17 @@ public class SearchVO implements Serializable {
     private List<PostVO> postVOList;
 
     /**
-     * 文章列表
+     * 用户列表
      */
     private List<UserVO> userVOList;
 
     /**
-     * 文章列表
+     * 图片列表
      */
     private List<Picture> pictureList;
+
+    /**
+     * 搜索结果列表
+     */
+    private List<Object> dataList;
 }
