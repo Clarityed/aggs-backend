@@ -15,7 +15,7 @@ spring:
     # 30 天过期
     timeout: 2592000
   # 数据库配置
-  # todo 需替换配置
+  # 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/aggs?useUnicode=true&characterEncoding=UTF-8&useSSL=false
@@ -30,11 +30,12 @@ spring:
 #    timeout: 5000
 #    password: 123456
   # Elasticsearch 配置
-  # todo 需替换配置，然后取消注释
-#  elasticsearch:
-#    uris: http://localhost:9200
-#    username: root
-#    password: 123456
+  # 需替换配置，然后取消注释
+  elasticsearch:
+    uris: http://localhost:9200
+    # 如果没有设置账号密码，这里填不填都不影响
+    username: root
+    password: 123456
   # 文件上传
   servlet:
     multipart:

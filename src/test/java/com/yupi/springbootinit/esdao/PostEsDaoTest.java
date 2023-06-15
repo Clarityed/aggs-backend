@@ -50,13 +50,11 @@ public class PostEsDaoTest {
     @Test
     void testAdd() {
         PostEsDTO postEsDTO = new PostEsDTO();
-        postEsDTO.setId(1L);
-        postEsDTO.setTitle("test");
-        postEsDTO.setContent("test");
-        postEsDTO.setTags(Arrays.asList("java", "python"));
-        postEsDTO.setThumbNum(1);
-        postEsDTO.setFavourNum(1);
-        postEsDTO.setUserId(1L);
+        postEsDTO.setId(3L);
+        postEsDTO.setTitle("clarity");
+        postEsDTO.setContent("clarity haha!");
+        postEsDTO.setTags(Arrays.asList("java", "go"));
+        postEsDTO.setUserId(3L);
         postEsDTO.setCreateTime(new Date());
         postEsDTO.setUpdateTime(new Date());
         postEsDTO.setIsDelete(0);
@@ -68,6 +66,12 @@ public class PostEsDaoTest {
     void testFindById() {
         Optional<PostEsDTO> postEsDTO = postEsDao.findById(1L);
         System.out.println(postEsDTO);
+    }
+
+    @Test
+    void findByContent() {
+        List<PostEsDTO> postEsDTOList = postEsDao.findByContent("haha");
+        System.out.println(postEsDTOList);
     }
 
     @Test
