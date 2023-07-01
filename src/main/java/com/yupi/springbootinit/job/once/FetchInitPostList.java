@@ -19,9 +19,6 @@ import java.util.Map;
 
 /**
  * 项目启动，执行一次，加载其他网站的文章
- *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 
 // 取消注释开启任务
